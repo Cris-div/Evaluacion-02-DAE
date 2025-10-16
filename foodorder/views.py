@@ -1,15 +1,12 @@
 from django.shortcuts import render
-
-# Create your views here.
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from .models import Plato, Pedido
 from .serializers import PlatoSerializer, PedidoSerializer
+# Create your views here.
 
-
-# --- Raíz de la API ---
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
